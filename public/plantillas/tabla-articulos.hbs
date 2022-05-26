@@ -1,0 +1,28 @@
+<style>
+    .table td,
+    .table th {
+        vertical-align: middle;
+    }
+</style>
+
+{{#if articulo.length}}
+<h2>Lista de Articulos</h2>
+<div class="table-responsive">
+    <table class="table table-dark">
+        <tr>
+            <th>Title</th>
+            <th>Price</th>
+            <th>URL</th>
+        </tr>
+        {{#each articulo}}
+        <tr>
+            <td>{{this.title}}</td>
+            <td>{{this.price}}</td>
+            <td>{{this.URL}}</td>
+        </tr>
+        {{/each}}
+    </table>
+</div>
+{{ else }}
+<h3 class="alert alert-warning">No hay articulos</h3>
+{{/if}}
